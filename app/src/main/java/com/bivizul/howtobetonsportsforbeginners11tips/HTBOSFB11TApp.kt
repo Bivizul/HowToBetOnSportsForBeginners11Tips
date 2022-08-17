@@ -21,7 +21,5 @@ class HTBOSFB11TApp : Application() {
 
         AppsFlyerLib.getInstance().init(AF_DEV_KEY, null, this)
         AppsFlyerLib.getInstance().start(this)
-
     }
-
 }

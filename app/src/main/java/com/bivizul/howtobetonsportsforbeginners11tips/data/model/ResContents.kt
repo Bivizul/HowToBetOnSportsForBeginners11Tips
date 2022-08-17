@@ -4,8 +4,7 @@ import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 
 @Keep
-@kotlinx.serialization.Serializable
 data class ResContents(
     @SerializedName("url")
-    val resContents: String
+    val resContents: String,
 )

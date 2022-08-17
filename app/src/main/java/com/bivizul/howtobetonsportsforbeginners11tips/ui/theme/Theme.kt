@@ -5,26 +5,22 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 private val DarkColorPalette = darkColors(
-    primary = Purple200,
-    primaryVariant = Purple700,
-    secondary = Teal200
+    primary = Color.Gray,
+    primaryVariant = Color.DarkGray,
+    onPrimary = Color.Black,
+    surface = TranspBlack,
 )
 
 private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200
-
-    /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
+    primary = Color.LightGray,
+    primaryVariant = Color.DarkGray,
     onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
+    surface = TranspWhite,
+
 )
 
 @Composable
@@ -36,6 +32,18 @@ fun HowToBetOnSportsForBeginners11TipsTheme(
         DarkColorPalette
     } else {
         LightColorPalette
+    }
+
+    val systemUiController = rememberSystemUiController()
+
+    if(darkTheme){
+        systemUiController.setSystemBarsColor(
+            color = DarkColorPalette.primaryVariant
+        )
+    }else{
+        systemUiController.setSystemBarsColor(
+            color = LightColorPalette.primaryVariant
+        )
     }
 
     MaterialTheme(

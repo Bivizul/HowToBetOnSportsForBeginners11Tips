@@ -1,6 +1,5 @@
 package com.bivizul.howtobetonsportsforbeginners11tips.data
 
-import com.bivizul.howtobetonsportsforbeginners11tips.data.model.Contents
 import com.bivizul.howtobetonsportsforbeginners11tips.data.model.ContentsObj
 import com.bivizul.howtobetonsportsforbeginners11tips.data.model.ResContents
 import com.bivizul.howtobetonsportsforbeginners11tips.data.model.SetRes
